@@ -1,5 +1,5 @@
 :root {
-    font-size: 1em;
+    font-size: 2em;
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
@@ -11,67 +11,79 @@
 }
 
 header {
-    height: 70px;
+    height: 125px;
+    padding: 2px;
     }
 
-header, footer {
-    margin-left: 2em;
+body {
     margin-right: 2em;
+    min-width: 300px;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 main {
-    margin-left: 2em;
     min-height: 70vh;
-    min-height: calc(100vh - 130px);
+    min-height: calc(100vh - 185px);
+    padding: 2px;
+}
+
+ul {
+    padding: 1px;
+    margin-left: -10px;
 }
 
 ul li {
     display: inline; 
-    border-right: 1px solid red;
-    padding-right: 3px;
+    padding: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
     text-transform: capitalize;
+    margin: 0;
+}
+
+.redline {
+    border-left: 2px solid red;
+    border-right: 2px solid red;
 }
 
 ul li:hover {
     background-color: rgba(244, 165, 96, 0.397);
-    border-style: hidden;
+    cursor: pointer;
 }
 
 nav {
     border-top: dashed 1px rgb(184, 8, 8);
     border-bottom:dashed 1px rgb(184, 8, 8);
-    padding: 2px;
+    padding: 4px;
 }
-
-
 
 ol {
     list-style: none;
     display: list-item;
     text-transform: uppercase;
     counter-reset: catalog;
-    margin-top: 5px;
 }
 
 ol li {
     color: rgb(23, 23, 170);
     background-color: rgba(163, 191, 245, 0.76);
     margin: 1px;
-    width: 8em;
+    width: 7em;
     border-radius: 2px;
-    margin-left: 18px;
+    margin-left: 37px;
 }
 
 ol li::before {
     content: "1";
     color: white;
     background-color: rgb(45, 121, 219);
-    padding-left: 3px;
-    padding-right: 2px;
+    padding-left: 7px;
+    padding-right: 7px;
     border-radius: 2px;
-    border-left: 2px solid rgba(214, 3, 3, 0.719);
+    border-left: 3px solid rgba(214, 3, 3, 0.719);
     margin-right: 5px;
-    margin-left: -18px;
+    margin-left: -37px;
    
     counter-increment: catalog;
     content: " " counter(catalog)
@@ -84,7 +96,7 @@ ol li:hover {
 
 ol li:hover::before {
     background-color: rgba(3, 27, 129, 0.733);
-    border-left: 2px solid red;
+    border-left: 3px solid red;
 }
 
 ol li::after {
@@ -101,6 +113,7 @@ ol li:hover::after {
 footer {
     height: 60px;
     padding: 10px;
+    padding-left: 0;
     border-top: 2px dashed rgb(184, 8, 8);
 }
 
