@@ -1,0 +1,106 @@
+:root {
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+*, ::before, ::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 70px;
+    }
+
+header, footer {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+main {
+    margin-left: 2em;
+    min-height: 70vh;
+    min-height: calc(100vh - 130px);
+}
+
+ul li {
+    display: inline; 
+    border-right: 1px solid red;
+    padding-right: 3px;
+    text-transform: capitalize;
+}
+
+ul li:hover {
+    background-color: rgba(244, 165, 96, 0.397);
+    border-style: hidden;
+}
+
+nav {
+    border-top: dashed 1px rgb(184, 8, 8);
+    border-bottom:dashed 1px rgb(184, 8, 8);
+    padding: 2px;
+}
+
+
+
+ol {
+    list-style: none;
+    display: list-item;
+    text-transform: uppercase;
+    counter-reset: catalog;
+    margin-top: 5px;
+}
+
+ol li {
+    color: rgb(23, 23, 170);
+    background-color: rgba(163, 191, 245, 0.76);
+    margin: 1px;
+    width: 8em;
+    border-radius: 2px;
+    margin-left: 18px;
+}
+
+ol li::before {
+    content: "1";
+    color: white;
+    background-color: rgb(45, 121, 219);
+    padding-left: 3px;
+    padding-right: 2px;
+    border-radius: 2px;
+    border-left: 2px solid rgba(214, 3, 3, 0.719);
+    margin-right: 5px;
+    margin-left: -18px;
+   
+    counter-increment: catalog;
+    content: " " counter(catalog)
+}
+
+ol li:hover {
+    background-color: rgba(0, 0, 139, 0.37);
+    cursor: pointer;
+}
+
+ol li:hover::before {
+    background-color: rgba(3, 27, 129, 0.733);
+    border-left: 2px solid red;
+}
+
+ol li::after {
+    content: url(/img/star.png);
+    visibility: hidden;
+}
+
+ol li:hover::after {
+    content: url(/img/star.png);
+    visibility: visible;
+}
+
+
+footer {
+    height: 60px;
+    padding: 10px;
+    border-top: 2px dashed rgb(184, 8, 8);
+}
+
